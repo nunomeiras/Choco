@@ -9,3 +9,4 @@ choco install paint.net --yes
 choco install pdf24 --yes
 choco install vlc --yes
 choco install zoom --yes
+choco install vcredist-all --yes
