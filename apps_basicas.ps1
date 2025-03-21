@@ -1,6 +1,6 @@
 choco install 7zip.install --yes
 choco install anydesk --yes
-choco install firefox /l:pt-PT --yes
+choco install firefox --yes
 choco install googlechrome --ignore-checksums --yes
 choco install notepadplusplus.install --yes
 choco install jre8 --yes
