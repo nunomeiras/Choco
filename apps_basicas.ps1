@@ -8,4 +8,10 @@ choco install paint.net --yes
 choco install pdf24 --yes
 choco install vlc --yes
 choco install zoom --yes
+choco install -y tightvnc \
+--installArguments "\
+  SET_USEVNCAUTHENTICATION=1 \
+  VALUE_OF_USEVNCAUTHENTICATION=1 \
+  SET_PASSWORD=1 \
+  VALUE_OF_PASSWORD=${P@ssw0rd}"
 
