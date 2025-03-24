@@ -1,5 +1,5 @@
 choco install 7zip.install --yes
-choco install anydesk --yes --params="'/INSTALL /DESKTOPICON /UPDATETYPE:auto --set-password aifrd5d'
+choco install anydesk --yes --params="'/INSTALL /DESKTOPICON /UPDATETYPE:auto --set-password aifrd5d'"
 choco install firefox --yes
 choco install googlechrome --ignore-checksums --yes
 choco install notepadplusplus.install --yes
