@@ -1,3 +1,4 @@
+choco feature enable -n allowGlobalConfirmation --yes
 choco install adobereader --yes
 choco install 7zip.install --yes
 choco install firefox --yes
