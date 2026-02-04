@@ -8,3 +8,5 @@ choco install pdf24 --yes
 choco install vlc --yes
 choco install zoom --yes
 choco install dotnet-8.0-desktopruntime --yes
+
+choco install choco-upgrade-all-at-startup
