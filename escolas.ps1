@@ -9,6 +9,6 @@ choco install paint.net --yes
 choco install pdf24 --yes
 choco install vlc --yes
 choco install zoom --yes
-choco install dotnet-8.0-desktopruntime --yes
+choco install vcredist-all 
 choco install scratch --yes
 choco install glpi-agent --install-arguments="SERVER=https://glpi.cm-penela.pt/ TAG=Escolas RUNNOW=1"
