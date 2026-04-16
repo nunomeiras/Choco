@@ -13,3 +13,14 @@ choco install vcredist-all
 choco install scratch --yes
 choco install glpi-agent --install-arguments="SERVER=https://glpi.cm-penela.pt/ TAG=Escolas RUNNOW=1"
 choco install choco-upgrade-all-at-startup
+
+
+# Rename PC
+$Serial = (Get-CimInstance Win32_BIOS).SerialNumber
+$Suffix = $Serial.Substring($Serial.Length - 5)
+$NewName = "CMP-$Suffix"
+
+Rename-Computer -NewName $NewName -Force
+
+
+
