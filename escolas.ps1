@@ -12,6 +12,7 @@ choco install zoom --yes
 choco install vcredist-all 
 choco install scratch --yes
 choco install glpi-agent --install-arguments="SERVER=https://glpi.cm-penela.pt/ TAG=Escolas RUNNOW=1"
+choco install microsoft-teams-new-bootstrapper --yes
 choco install choco-upgrade-all-at-startup
 
 
