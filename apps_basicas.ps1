@@ -10,3 +10,11 @@ choco install zoom --yes
 choco install vcredist-all -y
 choco install microsoft-teams-new-bootstrapper -y
 choco install choco-upgrade-all-at-startup
+
+
+# Rename PC
+$Serial = (Get-CimInstance Win32_BIOS).SerialNumber
+$Suffix = $Serial.Substring($Serial.Length - 5)
+$NewName = "CMP-$Suffix"
+
+Rename-Computer -NewName $NewName -Force
