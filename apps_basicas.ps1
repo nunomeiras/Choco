@@ -1,6 +1,7 @@
 
 powercfg -h off
 
+choco feature enable -n allowGlobalConfirmation --yes
 choco install adobereader -y
 choco install nanazip --yes
 choco install firefox --yes
