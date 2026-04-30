@@ -16,6 +16,39 @@ choco install microsoft-teams-new-bootstrapper --yes
 choco install choco-upgrade-all-at-startup
 
 
+Write-Host -ForegroundColor Cyan "Procurando pen USB com Office..."
+
+$OfficeInstalled = $false
+
+$Drives = Get-Volume | Where-Object {
+    $_.DriveType -eq 'Removable' -and $_.DriveLetter
+}
+
+foreach ($Drive in $Drives) {
+    $Path = "$($Drive.DriveLetter):\Office\setup.exe"
+    $Config = "$($Drive.DriveLetter):\Office\config.xml"
+
+    if (Test-Path $Path) {
+        Write-Host -ForegroundColor Green "Office encontrado em $Path"
+
+        if (Test-Path $Config) {
+            Write-Host "Instalando Office com config.xml..."
+            Start-Process -FilePath $Path -ArgumentList "/configure `"$Config`"" -Wait
+        }
+        else {
+            Write-Host "Instalando Office modo default..."
+            Start-Process -FilePath $Path -ArgumentList "/quiet" -Wait
+        }
+
+        $OfficeInstalled = $true
+        break
+    }
+}
+
+if (-not $OfficeInstalled) {
+    Write-Host -ForegroundColor Yellow "Nenhuma instalação do Office encontrada na pen."
+}
+
 # Rename PC
 $Serial = (Get-CimInstance Win32_BIOS).SerialNumber
 $Suffix = $Serial.Substring($Serial.Length - 5)
