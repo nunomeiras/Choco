@@ -54,3 +54,6 @@ $Suffix = $Serial.Substring($Serial.Length - 5)
 $NewName = "CMP-$Suffix"
 
 Rename-Computer -NewName $NewName -Force
+
+
+Restart-Computer -force
