@@ -1,3 +1,6 @@
+
+powercfg -h off
+
 choco install adobereader -y
 choco install nanazip --yes
 choco install firefox --yes
