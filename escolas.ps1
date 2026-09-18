@@ -29,7 +29,7 @@ $Drives = Get-Volume | Where-Object {
 
 foreach ($Drive in $Drives) {
     $Path = "$($Drive.DriveLetter):\Office\setup.exe"
-    $Config = "$($Drive.DriveLetter):\Office\config.xml"
+    $Config = "$($Drive.DriveLetter):\Office\install.xml"
 
     if (Test-Path $Path) {
         Write-Host -ForegroundColor Green "Office encontrado em $Path"
