@@ -3,7 +3,7 @@ powercfg -h off
 
 choco feature enable -n allowGlobalConfirmation --yes
 choco install adobereader --yes
-choco install nanazip --yes
+choco install 7zip --yes
 choco install firefox --yes
 choco install googlechrome --ignore-checksums --yes
 choco install notepadplusplus.install --yes
